@@ -1,0 +1,41 @@
+[
+    {
+        "codigo": 1,
+        "titulo": "Alien 8º passageiro",
+        "duracao": 2,
+        "atores": [
+            "Pablo",
+            "Joao",
+            "Maria Betania",
+            "Carlitos"
+        ],
+        "anoDeLancamento": 2006,
+        "emCartaz": false
+    },
+    {
+        "codigo": 2,
+        "titulo": "Meu malvado favorito",
+        "duracao": 1,
+        "atores": [
+            "Pablo",
+            "Maria Betania",
+            "Carlitos",
+            "Paula"
+        ],
+        "anoDeLancamento": 2022,
+        "emCartaz": true
+    },
+    {
+        "codigo": 3,
+        "titulo": "Meu Novo Malvado",
+        "duracao": 2.3,
+        "atores": [
+            "Pablo",
+            "Maria Betania",
+            "Carlitos",
+            "Paula"
+        ],
+        "anoDeLancamento": 2022,
+        "emCartaz": true
+    }
+]
