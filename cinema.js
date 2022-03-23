@@ -19,30 +19,29 @@ const adicionarFilme = (cod, titulo, duracao, atores, anoDeLancamento, emCartaz)
 // BUSCA ITENS ATRAVES DO CODIGO ID DO FILME
 
 const buscarFilme = (cod) => {
-    for (var i = 0; i < dados.length; i++) {
-        if (cod === dados[i].codigo) {
+    dados.findIndex(element => {
+        if (cod === element.codigo) {
             console.log(`-------------------\n
-            Codigo: ${dados[i].codigo}\n
-            Titulo: ${dados[i].titulo}\n
-            Duração: ${dados[i].duracao} hora(s)\n
-            Atores: ${dados[i].atores.join(", ")}\n
-            Ano de lançamento: ${dados[i].anoDeLancamento}\n
-            Em cartaz: ${dados[i].emCartaz === true ? "Sim" : "Não"}\n`)
-            break
+            Codigo: ${element.codigo}\n
+            Titulo: ${element.titulo}\n
+            Duração: ${element.duracao} hora(s)\n
+            Atores: ${element.atores.join(", ")}\n
+            Ano de lançamento: ${element.anoDeLancamento}\n
+            Em cartaz: ${element.emCartaz === true ? "Sim" : "Não"}\n`)
         }
-    }
+    })
 }
 
 
 // ALTERA O STATUS DE ESTAR OU NAO EM CARTAZ DE UM FILME ** ATUALIZADO COM CALLBACK **
 
 const alterarStatusEmCartaz = (cod, funcBuscar) => {
-    for (var i = 0; i < dados.length; i++) {
-        if (cod === dados[i].codigo) {
-            dados[i].emCartaz == true ? dados[i].emCartaz = false : dados[i].emCartaz = true
+    dados.findIndex(codigo => {
+        if (cod === codigo.codigo) {
+            codigo.emCartaz == true ? codigo.emCartaz = false : codigo.emCartaz = true
             funcBuscar(cod)
         }
-    }
+    })
 }
 
 // LISTAR TODOS OS FILMES DO CATALOGO ** ATUALIZADO COM FOREACH **
@@ -105,10 +104,10 @@ const listarFilmesDeLongaDuracao = (catalogo) => {
 /* listarFilmesEmCartaz(dados) */
 
 // * TESTE DE ALTERAÇÃO DE STATUS DE CARTAZ * //
-/* alterarStatusEmCartaz(2, buscarFilme) */
+/* alterarStatusEmCartaz(3, buscarFilme) */
 
 // * TESTE DE EXECUÇÃO PARA BUSCA DE FILMES * //
-/* buscarFilme(1) */
+/* buscarFilme(3) */
 
 // * TESTE DE EXECUÇÃO PARA ADICIONAR FILME * //
 /* console.log(dados)
@@ -116,7 +115,7 @@ adicionarFilme(4,"TopGun",2,["Pablo", "Cruz","Will Smith"], 1994, false)
 console.log(dados) */
 
 // * TESTE DE EXECUÇÃO BUSCAR FILME * //
-/* buscarFilme(3) */
+/* buscarFilme(dados, 2) */
 
 // * TESTE DE EXECUÇÃO FILMES LONGOS * //
 /* listarFilmesDeLongaDuracao(dados) */
