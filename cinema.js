@@ -114,8 +114,5 @@ const listarFilmesDeLongaDuracao = (catalogo) => {
 adicionarFilme(4,"TopGun",2,["Pablo", "Cruz","Will Smith"], 1994, false)
 console.log(dados) */
 
-// * TESTE DE EXECUÇÃO BUSCAR FILME * //
-/* buscarFilme(dados, 2) */
-
 // * TESTE DE EXECUÇÃO FILMES LONGOS * //
 /* listarFilmesDeLongaDuracao(dados) */
